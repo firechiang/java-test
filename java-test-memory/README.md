@@ -16,13 +16,8 @@
   </tr>
   <tr>
   <td><span>方法区（Method Area）</span></br><span>存储静态变量或引用、常量或常量引用、class相关信息</span></td>
-  <td>Java栈（Java Stack）</td>
-  <td>本地方法区（Native Method Stack）</td>
-  </tr>
-  <tr>
-  <td>存储静态变量或引用、常量或常量引用、class相关信息</td>  
-  <td>存储基本数据类型的值和对象的引用</td> 
-  <td>本地方法相关信息（就是Native（本地系统）函数相关）</td>
+  <td><span>Java栈（Java Stack）</span></br><span>存储基本数据类型的值和对象的引用</span></td>
+  <td><span>本地方法区（Native Method Stack）</span></br><span>本地方法相关信息（就是Native（本地系统）函数相关）</span></td>
   </tr>
 </table> 
 ```bash
