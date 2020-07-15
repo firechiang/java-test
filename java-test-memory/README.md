@@ -17,10 +17,10 @@
     <tr>
         <td align="center"><span>方法区（Method Area）</span></br><span>存储静态变量的值或对象引用、常量的值或对象引用、Class相关信息</span></td>
         <td align="center"><span>Java栈（Java Stack）</span></br><span>存储基本数据类型的值和对象的引用</span></td>
-        <td align="center"><span>本地方法区（Native Method Stack）</span></br><span>本地方法相关信息（就是Native（本地系统）函数相关）</span></td>
+        <td align="center"><span>本地方法区（Native Method Stack）</span></br><span>存储本地方法相关信息（就是Native（本地系统）函数相关）</span></td>
     </tr>
     <tr>
-        <td align="center"><span>堆（Heap） </span></br><span>使用New或其它指令所创建的实列对象都在这里面</span></td>
+        <td align="center"><span>堆（Heap） </span></br><span>存储使用New或其它指令所创建的实列对象</span></td>
         <td align="center" colspan="2"><span>程序计数器（Progran Counter Register）</span></br><span>存储当前线程所执行到的字节码行号数以及下一条所要执行的指令（存储线程运行指令相关信息）</span></td>
     </tr>
     <tr>
