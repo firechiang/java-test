@@ -9,11 +9,8 @@
         <td colspan="3" align="center">Class文件  => 类加载器</td>
     </tr>
     <tr>
-        <td colspan="3" align="center" border="0" cellpadding="0" cellspacing="0">↑↓</td>
+        <td colspan="3" align="center">↑↓</td>
     </tr>
-</table> 
-
-<table>
     <tr>
         <td colspan="3" align="center">运行时数据区（Runtime Data Area）</td>
     </tr>
