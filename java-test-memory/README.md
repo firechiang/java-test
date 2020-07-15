@@ -10,7 +10,7 @@
   </tr>
 </table> 
 
-<table>
+<table style="text-align:center;">
   <tr>
     <td colspan="3">运行时数据区（Runtime Data Area）</td>
   </tr>
