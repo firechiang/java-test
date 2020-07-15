@@ -5,12 +5,12 @@
  - 方法区（Method Area）和堆（Heap）是所有线程共享的
  - Java栈（Java Stack）、本地方法区（Native Method Stack） 、程序计数器（Progran Counter Register）是每个线程私有的
 <table>
-    <th>
-        <td colspan="3" align="center">Class文件  => 类加载器</td>
-    </th>
-    <th>
-        <td colspan="3" align="center">↑↓</td>
-    </th>
+    <tr>
+        <th colspan="3" align="center">Class文件  => 类加载器</th>
+    </tr>
+    <tr>
+        <th colspan="3" align="center">↑↓</th>
+    </tr>
     <tr>
         <td colspan="3" align="center">运行时数据区（Runtime Data Area）</td>
     </tr>
@@ -22,6 +22,15 @@
     <tr>
         <td align="center"><span>堆（Heap） </span></br><span>使用New或其它指令所创建的实列对象都在这里面</span></td>
         <td align="center" colspan="2"><span>程序计数器（Progran Counter Register）</span></br><span>存储当前线程所执行到的字节码行号数以及下一条所要执行的指令（存储线程运行指令相关信息）</span></td>
+    </tr>
+    <tr>
+        <th align="center">↑↓</th>
+        <th colspan="2" align="center">↑↓</th>
+    </tr>
+    <tr>
+        <th><span>执行引擎<span></br><span>（Execution Engine）</span></th>
+        <th><span>本地接口<span></br><span>（Native Interface）</span></th>
+        <th><span>本地库<span></br><span>（Native Libranies）</span></th>
     </tr>
 </table> 
 ```bash
