@@ -12,7 +12,7 @@
 
 <table>
   <tr>
-    <td colspan="5">运行时数据区（Runtime Data Area）</td>
+    <td colspan="6">运行时数据区（Runtime Data Area）</td>
   </tr>
   <tr>
     <td>方法区（Method Area）</td>
