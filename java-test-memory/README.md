@@ -30,7 +30,7 @@
     </tr>
     <tr>
         <th>执行引擎（Execution Engine）</span>&emsp;&emsp;&emsp;&emsp;&emsp;=></th>
-        <th>本地接口（Native Interface）&emsp;&emsp;&emsp;&emsp;&emsp;=></th>
+        <th align="left">本地接口（Native Interface）=></th>
         <th><span>本地库</span></br><span>（Native Libranies）</span></th>
     </tr>
 </table>
