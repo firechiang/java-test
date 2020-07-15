@@ -5,12 +5,12 @@
  - 方法区（Method Area）和堆（Heap）是所有线程共享的
  - Java栈（Java Stack）、本地方法区（Native Method Stack） 、程序计数器（Progran Counter Register）是每个线程私有的
 <table>
-    <tr>
+    <th>
         <td colspan="3" align="center">Class文件  => 类加载器</td>
-    </tr>
-    <tr>
+    </th>
+    <th>
         <td colspan="3" align="center">↑↓</td>
-    </tr>
+    </th>
     <tr>
         <td colspan="3" align="center">运行时数据区（Runtime Data Area）</td>
     </tr>
