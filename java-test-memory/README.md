@@ -7,7 +7,9 @@
 <table>
     <tr>
         <td colspan="3" align="center">Class文件  => 类加载器</td>
-        <td colspan="3" align="center" border="0">↑↓</td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center" border="0" cellpadding="0" cellspacing="0">↑↓</td>
     </tr>
 </table> 
 
