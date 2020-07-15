@@ -6,7 +6,8 @@
  - Java栈（Java Stack）、本地方法区（Native Method Stack） 、程序计数器（Progran Counter Register）是每个线程私有的
 <table>
     <tr>
-        <td>Class文件  => 类加载器</td>
+        <td colspan="3" align="center">Class文件  => 类加载器</td>
+        <td colspan="3" align="center" border="0">↑↓</td>
     </tr>
 </table> 
 
