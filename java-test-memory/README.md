@@ -4,20 +4,20 @@
 #### 二、JVM内存结构
  - 方法区（Method Area）和堆（Heap）是所有线程共享的
  - Java栈（Java Stack）、本地方法区（Native Method Stack） 、程序计数器（Progran Counter Register）是每个线程私有的
-<table style="text-align:center;">
+<table>
   <tr>
     <td>Class文件  => 类加载器</td>
   </tr>
 </table> 
 
-<table style="text-align:center;">
+<table>
   <tr>
     <td colspan="3" align="center">运行时数据区（Runtime Data Area）</td>
   </tr>
   <tr>
-  <td><span>方法区（Method Area）</span></br><span>存储静态变量或引用、常量或常量引用、class相关信息</span></td>
-  <td><span>Java栈（Java Stack）</span></br><span>存储基本数据类型的值和对象的引用</span></td>
-  <td><span>本地方法区（Native Method Stack）</span></br><span>本地方法相关信息（就是Native（本地系统）函数相关）</span></td>
+  <td align="center"><span>方法区（Method Area）</span></br><span>存储静态变量或引用、常量或常量引用、class相关信息</span></td>
+  <td align="center"><span>Java栈（Java Stack）</span></br><span>存储基本数据类型的值和对象的引用</span></td>
+  <td align="center"><span>本地方法区（Native Method Stack）</span></br><span>本地方法相关信息（就是Native（本地系统）函数相关）</span></td>
   </tr>
 </table> 
 ```bash
