@@ -18,7 +18,7 @@
     <tr>
         <td align="center"><span>方法区（Method Area）</span></br><span>存储静态变量的值或对象引用、常量的值或对象引用、Class（类）相关信息包括Method</span></td>
         <td align="center"><span>Java栈（Java Stack）</span></br><span>存储基本数据类型的值和对象的引用</span></td>
-        <td align="center"><span>本地方法区（Native Method Stack）</span></br><span>存储本地方法相关信息（就是Native（本地系统）函数相关）</span></td>
+        <td align="center"><span>本地方法区（Native Method Stack）</span></br><span>存储本地方法相关信息（就是Native函数相关）</span></td>
     </tr>
     <tr>
         <td align="center"><span>堆（Heap） </span></br><span>存储使用New或其它指令所创建的实列对象</span></td>
@@ -40,6 +40,6 @@
  - 所有实列对象都存储在堆（Heap） 里面（每一个对象都分为对象头信息和对象的实列数据存储在堆里面）
  - 如果某个对象被某个函数所调用那么这个对象的引用就会保存到栈（Stack）当中 
  
-#### Java内存模型
+#### 四、Java内存模型
 
 
