@@ -12,7 +12,7 @@
 
 <table style="text-align:center;">
   <tr>
-    <td colspan="3" style="text-align:center;">运行时数据区（Runtime Data Area）</td>
+    <td colspan="3" align="center">运行时数据区（Runtime Data Area）</td>
   </tr>
   <tr>
   <td><span>方法区（Method Area）</span></br><span>存储静态变量或引用、常量或常量引用、class相关信息</span></td>
