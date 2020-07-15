@@ -12,14 +12,19 @@
 
 <table>
   <tr>
-    <td colspan="6">运行时数据区（Runtime Data Area）</td>
+    <td colspan="3">运行时数据区（Runtime Data Area）</td>
   </tr>
   <tr>
-    <td>方法区（Method Area）</td>
+   <td>方法区（Method Area）</td>
+   <td>Java栈（Java Stack）</td>
+   <td>本地方法区（Native Method Stack）</td>
+   </tr>
+  <tr>
+    
     <td>存储静态变量或引用、常量或常量引用、class相关信息</td>
-    <td>Java栈（Java Stack）</td>
+    
     <td>存储基本数据类型的值和对象的引用</td>
-    <td>本地方法区（Native Method Stack）</td>
+    
     <td>本地方法相关信息（就是Native（本地系统）函数相关）</td>
   </tr>
 </table> 
