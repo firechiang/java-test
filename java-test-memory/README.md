@@ -29,8 +29,8 @@
         <th colspan="2" align="center">↑↓</th>
     </tr>
     <tr>
-        <th>执行引擎（Execution Engine）</span>&emsp;&emsp;&emsp;&emsp;&emsp;=></th>
-        <th align="left">本地接口（Native Interface）=></th>
+        <th><span>执行引擎</span></br><span>（Execution Engine）</span></br><span>=></span></th>
+        <th><span>本地接口</span></br><span>（Native Interface）</span></br><span>=></span></th>
         <th><span>本地库</span></br><span>（Native Libranies）</span></th>
     </tr>
 </table>
