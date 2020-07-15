@@ -15,9 +15,9 @@
     <td colspan="3">运行时数据区（Runtime Data Area）</td>
   </tr>
   <tr>
-  <td>方法区（Method Area）</td>
-  <td>Java栈（Java Stack）</td>
-  <td>本地方法区（Native Method Stack）</td>
+  <td rowspan="2">方法区（Method Area）</td>
+  <td rowspan="2">Java栈（Java Stack）</td>
+  <td rowspan="2">本地方法区（Native Method Stack）</td>
   </tr>
   <tr>
   <td>存储静态变量或引用、常量或常量引用、class相关信息</td>  
