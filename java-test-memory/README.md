@@ -20,11 +20,11 @@
     <td></td>
   </tr>
   <tr>
-    <td rowspan="2">方法区（Method Area）</td>
+    <td>方法区（Method Area）</td>
     <td>存储静态变量或引用、常量或常量引用、class相关信息</td>
-    <td rowspan="2">Java栈（Java Stack）</td>
+    <td>Java栈（Java Stack）</td>
     <td>存储基本数据类型的值和对象的引用</td>
-    <td rowspan="2">本地方法区（Native Method Stack）</td>
+    <td>本地方法区（Native Method Stack）</td>
     <td>本地方法相关信息（就是Native（本地系统）函数相关）</td>
   </tr>
 </table> 
