@@ -10,7 +10,7 @@ public class T_07_UncaugException {
 		Thread thread = new Thread(()->{
 			throw new RuntimeException("测试错误");
 		});
-		thread.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+		Thread.currentThread().setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
 			@Override
 			public void uncaughtException(Thread t, Throwable e) {
 				System.err.println("线程出现了异常："+e);
