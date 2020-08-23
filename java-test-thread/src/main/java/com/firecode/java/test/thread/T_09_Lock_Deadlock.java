@@ -3,7 +3,7 @@ package com.firecode.java.test.thread;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 演示死锁
+ * 演示简单死锁
  */
 public class T_09_Lock_Deadlock {
 	
