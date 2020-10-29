@@ -11,6 +11,22 @@ import java.util.concurrent.TimeUnit;
 /**
  * 线程池简单使用
  * Executors工具类创建线程池（注意：实际生产当中不建议使用 Executors 工具类创建线程池，因为它没有限制队列的数量，可能会导致内存溢出）
+ * 
+ * 线程池相关类的说明：
+ * Executor（线程池顶层接口）
+ * ExecutorService（线程池管理接口继承Executor接口）
+ * AbstractExecutorService（线程池公供实现逻辑，该类实现ExecutorService接口）
+ * 
+ * 线程池实现线程复用的核心逻辑（注意：线程复用的逻辑写在 runWorker() 函数里面）：
+ * 1，当前没有线程或线程数小于coreSize创建Work线程
+ * 2，一个Work线程只要任务不为空就会一直在跑（它用的while循环，不断的获取任务来执行）
+ * 
+ * 线程池的状态：
+ * 1，RUNNING（接收新任务并执行排队任务）
+ * 2，SHUTDOWN（不接收新任务但处理排队任务）
+ * 3，SOTP（不接收新任务也不处理排队任务并中断正在进行的任务）
+ * 4，TIDYING（所有任务都已终止，workCount为零时状态转为TIDYING，并将运行terminate()回调函数）
+ * 5，TERMINATED（线程池完全停止并且terminate()回调函数执行完成）
  * @author JIANG
  */
 public class T_01_ThreadPoolExecutor extends ThreadPoolExecutor {
@@ -21,7 +37,7 @@ public class T_01_ThreadPoolExecutor extends ThreadPoolExecutor {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// CPU 数量
 		int coreProcessors = Runtime.getRuntime().availableProcessors();
 		/** 
@@ -40,7 +56,11 @@ public class T_01_ThreadPoolExecutor extends ThreadPoolExecutor {
 		 * @param workQueue        线程队列（建议使用有界队列）
 		 * @param threadFactory    线程工厂
 		 * @param handler          当线程队列满了的时候我们的拒绝策略（注意：如果线程队列是无界队列的话，是不会执行拒绝策略的）
-		 * 
+		 * JDK默认实现了4种拒绝策略
+		 * 1，AbortPolicy（直接抛出异常，也是默认的拒绝策略）,
+		 * 2，DiscardPolicy（直接丢弃任务）
+		 * 3，DiscardOldestPolicy（丢弃最老的任务，就是最先添加但还没有执行的任务）
+		 * 4，CallerRunsPolicy（直接执行该任务，哪个线程提交的任务就在哪个线程执行）
 		 */
 		ThreadPoolExecutor pool = new ThreadPoolExecutor(coreProcessors,
 				                                         coreProcessors * 2, 
@@ -52,6 +72,11 @@ public class T_01_ThreadPoolExecutor extends ThreadPoolExecutor {
 				                                             System.err.println("当线程队列满了，拒绝了");
 		                                                 });
 		System.err.println(pool);
+		System.err.println("线程池是调用了shutdown()函数："+pool.isShutdown());
+		System.err.println("线程池是否完全停止了："+pool.isTerminated());
+		System.err.println("线程等待了三秒后，线程池是否已经完全停止:"+pool.awaitTermination(3, TimeUnit.SECONDS));
+		// 立即停止线程池（返回未执行的任务）
+		//pool.shutdownNow();
 		// 关闭线程池
 		pool.shutdown();
 	}
