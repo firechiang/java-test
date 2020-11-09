@@ -18,7 +18,8 @@ public class Atom05LongAdder {
     
     
     /**
-     * 测试 LongAdder 性能
+     * 测试 LongAdder 性能（适用场景：多线程争用，统计求和）
+     * LongAdder效率高的原因：它在每个线程都有独立的计数器（记录递增和递减的次数），最后获取值时，将所有线程的计数器相加就可以了
      */
     private static void testLongAdder() {
         LongAdder counter = new LongAdder();
@@ -42,7 +43,8 @@ public class Atom05LongAdder {
     }
     
     /**
-     * 测试 AtomicLong 性能
+     * 测试 AtomicLong 性能（适用场景：少量线程争用，cas相关操作）
+     * 注意：AtomicLong虽然没有锁但是JAVA虚拟机多线程修改都是将更新后的数值调用flush()函数刷到主内存，再调用refresh()函数将更新的值刷到各个线程中的工作内存。它是通过这两步来保证线程间的数据同步所以效率稍稍低一点
      */
     private static void testAtomicLong() {
         AtomicLong counter = new AtomicLong(0);
