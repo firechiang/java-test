@@ -94,7 +94,7 @@ public class Lock01_Interface {
 	private static class MyCondition implements Condition {
 
 		/**
-		 * 进入等待
+		 * 阻塞等待（注意：等待会释放锁，所以等待之前必须持有锁，否则报错）
 		 */
 		@Override
 		public void await() throws InterruptedException {
@@ -127,7 +127,7 @@ public class Lock01_Interface {
 		}
 
 		/**
-		 * 唤醒单个等待
+		 * 唤醒等待最长的那个线程（注意：释放需要锁，所以释放之前必须持有锁）
 		 */
 		@Override
 		public void signal() {
@@ -136,7 +136,7 @@ public class Lock01_Interface {
 		}
 
 		/**
-		 * 唤醒所有等待
+		 * 唤醒所有等待（注意：释放需要锁，所以释放之前必须持有锁）
 		 */
 		@Override
 		public void signalAll() {
