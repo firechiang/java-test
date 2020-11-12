@@ -1,5 +1,6 @@
 package com.firecode.test.concurrent.lock;
 
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -63,6 +64,9 @@ public class Lock01_Interface {
 			return false;
 		}
 		
+		/**
+		 * 创建阻塞对象
+		 */
 		@Override
 		public Condition newCondition() {
 			return null;
@@ -80,5 +84,63 @@ public class Lock01_Interface {
 		public void lock() {
 		}
 		
+	}
+	
+	/**
+	 * 阻塞实现
+	 * @author 37982
+	 *
+	 */
+	private static class MyCondition implements Condition {
+
+		/**
+		 * 进入等待
+		 */
+		@Override
+		public void await() throws InterruptedException {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void awaitUninterruptibly() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public long awaitNanos(long nanosTimeout) throws InterruptedException {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public boolean await(long time, TimeUnit unit) throws InterruptedException {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public boolean awaitUntil(Date deadline) throws InterruptedException {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		/**
+		 * 唤醒单个等待
+		 */
+		@Override
+		public void signal() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		/**
+		 * 唤醒所有等待
+		 */
+		@Override
+		public void signalAll() {
+			// TODO Auto-generated method stub
+		}
 	}
 }
